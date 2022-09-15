@@ -484,3 +484,116 @@ We can work on Git feature in two ways.
 	1) Local Repository
 	
 	2) Remote Repository
+
+Java Script is a client side script language which is embeded with HTML code and execute at client level. Here client means Web Browser.
+
+There are two way to use JS in HTML web page.
+
+	1) Internal Javascript:- We write JS code inside <script></script>
+
+	2) External Javascript:- We create a separate file with exetension js and include this file using <script src="path_of_js_file"></script>
+
+It is a programming language and having all concept related to any programming language like C, PHP, Python etc.
+
+Common concept:-
+
+	1) Constant
+	2) Variable 
+	3) Data Type 
+	4) Decision construct (if else, switch case)
+	5) Looping construct
+	6) Function 
+	7) Array or collection 
+	8) Object concept 
+
+JS is an Object base language and in other term each and every term here is consider as an Object. 
+
+Object contain properties and method (function)
+
+JS have some ready made Object Model.
+
+	1) DOM Document Object Model 
+
+	2) BOM Browser Object Model 
+
+According to JS, it treated every HTML content as an Object known as Node.
+
+DOM provide some readymade function.
+
+	alert(), confirm(), prompt(), setTimeout(), setInterval(), clearInterval() etc.
+
+To learn a language properly we must have a skill to debug its code.
+
+Debug is a process to find issue in code and resolve it.
+
+Issue can be of two types.
+
+	1) Syntactical issue:- when person have poor knowledge of language. 
+
+	2) Logical issue:- when person have poor knowledge of problem.
+
+There is concept of Console in Web browser and we can work this Console with the help of readymade object console in JS. 
+
+JS is a dynamic type language which means here variable is capable to hold any type of value. 
+
+When we initialize a variable then its type is defined.
+
+var x;
+
+This is a syntax to declare a variable but now it is not clear what type is hold by this variable until we initialize it.
+
+typeof() function is used to detect a variable type in JS.
+
+Allowed Type in JS:- 
+
+	1) undefined means now we don't know about type of value 
+
+	2) string is represent by a value enclosed in single quote as well as double quote.
+
+	3) number is represent by any number either decimal number.
+
+	4) boolean is represent by true or false.
+
+	5) object 
+
+Arithmetic Operator:- 
+
+	+ for addition
+	- for subtraction
+	* for multiplication 
+	/ for division
+	% for division gives remainder 
+
+Arithmetic Assignment Operator or shorthand operator:- 
+
+	+=
+	-=
+	/=
+	*=
+	%=
+
+	a += 10;  means a = a + 10;
+
+What is function?
+
+	We already know alert() is a function inside window global object.
+
+	It is a set of instruction or statement refer by a name known as function name. This set will be executed when we call the function.
+
+	alert("Hello World"); 
+
+	Above statement depicts function call.
+
+What is event?
+
+	Event means something happens.
+
+	Event Handler means on an event something perform.
+
+JS is an Event Programming.
+
+	JS provide pre-defined event.
+
+	And being a developer, our task is to associate some function as an event handler to these event.
+
+	
