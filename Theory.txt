@@ -1,0 +1,486 @@
+Internet:- International Network or network of networks.
+
+Main use of internet is Information sharing or share the information.
+
+Internet follow Client-Server Architecture.
+
+Client:- It is a software which is used to generate request to server and handle the response send by server. And this software is known as Web Browser.
+
+Server:- It is a software which is used to handle request of client, prepare the response and deliver this response back to client. This software is known as Web Server.
+
+For e.g. Apache, IIS, GWS, Lightpd etc.
+
+HTTP:- HyperText Transfer Protocol 
+	
+	It is a standard protocol to communicate between client and server. 
+	
+	HTTP Base Client --> HTTP Web Request --> HTTP Base Server --> HTTP Response with HTTP Status Code 
+	
+	HTTP Status Code is a number which indicate the status of response. 
+	
+		1) 1xx represent Informational responses
+		
+		2) 2xx represent Successful response 
+		
+		3) 3xx represnt Redirection
+		
+		4) 4xx represent Client Error 
+		
+		5) 5xx represent Server Error 
+		
+	Initially, HTTP is capable to send only textual data. 
+	
+	Nowadays, HTTP is capable to send different type of data. Client differentiate these data with the help of MIME type. 
+	
+	MIME:- Multipurpose Internet Mail Extension Its sole purpose to convey type of content. 
+	
+		type/sub-type 
+		
+		text/html
+		text/css
+		image/jpeg
+		image/png
+		application/ms-word etc. 
+		
+	Two feature of HTTP 
+	
+		1) Connection-less:- HTTP establish connection of client and server until reponse is successfully delivered to server. This feature for scalability.
+		
+		2) Stateless:- HTTP never store client information on round trip to server. Due to this, every client request is treated as a new client request for a server.
+
+Web Page:- page which display information on internet. 
+
+Web Site:- collection of inter-related and inter-linked web pages. 
+
+How to build a Web Page 
+
+	HTML (HyperText Markup Language) It is used to describes the structure of a Web page.
+	
+	CSS (Cascading Style Sheet) It is used to describes how HTML elements are to be displayed on screen, paper, or in other media
+	
+	HTML + CSS = Web Page 
+	
+	These web page are called Static Web Page. 
+	
+	Static Web Page:- A web page which content can be changed by manual effort of a developer.
+	
+	Dynamic Web Page:- A web page which content can be changed by end user contribution or some application logic build by developer. 
+	
+How to build Dynamic Web Page 
+
+	Script Language:- A language which can be embedded in HTML code. And language code can be executed at client side as well as server side. 
+	
+	1) Client Side Script Language:- JavaScript, VBScript, JScript.
+		Task:- 
+			i)  Data Validation
+			ii) UI enhancement like slide show, popup etc. In other word, to improve UX (User Experience)
+	
+	2) Server Side Script Language:- PHP, Python, ASP.Net, JSP, Coldfusion, Ruby on Rail, NodeJS etc. 
+		Task:- 
+			i)  To interact with database
+			ii) To build statefull application 
+			
+HTML:- Hyper Text Markup Language
+
+In markup language, tag concept is used. 
+
+	<tag_name> :- start tag 
+	
+	</tag_name> :- end tag 
+	
+	<tag_name> Content of Tag </tag_name>
+	
+For executing HTML web page, we need web browser. 
+
+HTML is a specification designed by W3C (World Wide Web Consoritum) and this specification is implemented by the web browser.
+
+HTML contain pre-defined tag. Due to this, it is known as Declarative language.
+
+There are different type of HTML specification. Currently HTML 5 specification is used by web browser.
+
+HTML web page is a file with extension html or htm 
+
+HTML is interpreted by Web Browser and this process is called rendering.
+
+Web browser never gives any syntactical error.
+
+<!doctype html>
+
+This is a processing instruction given to web browser for specifying the HTML 5 specification is used in rendering.
+
+Note:- make a habit to write tag name in lower case.
+
+<html> is a root tag where all HTML tag is a part of it.
+
+<head> is a tag which explain the header information of a web page.
+
+<title> is a tag whose content will appear on web browser title bar of web page
+
+<body> is a tag which contain the visual part of web page. 
+
+Web browser ignore the whitespace (new line, spaces, tab).
+
+For generating whitespace in HTML web page output. There are some internal entities. Entities are begin with & and ends with ; 
+
+	&nbsp; Non breaking Space 
+	&copy; Copyright sign 
+	&amp; Ampersand sing 
+	&quot; Quotation marks 
+	&trade; Trade mark 
+	&reg; Register mark 
+	
+To generate a new line there is an empty tag (a tag which have no content)
+	<br>
+	
+Category of tag or element 
+
+	1) Inline tag:- It cover the screen area according to its content  
+	
+	2) Block tag:- It cover the screen complete block irrespective to its content
+
+	3) Formatting tag:- these tag convey output format of content of tag.
+	
+	4) Semantic tag:- these tag convey meaning of content of tag. Never use semantic tag for formatting.
+	
+Attribute:- It is an addition properties to explain HTML element. It come in pair of name value pair and value is enclosed in double quote.
+
+Character encoding:- 
+	Computer understand only binary 0 or 1. To understand character, there is process which convert a character into binary form and this process is called Character encoding. 
+	
+	There are two type of character encoding.
+	
+	1) ASCII 8 bit and support only English language. 
+	
+	2) UNICODE 16 bit and support all languages symbol.
+		Computer can not directly understand UNICODE and there is concept of UTF Unicode Transformation Format. 
+		
+Required Tag:- 
+
+	How to display an image to HTML web page.
+	
+	<img/> tag is an empty tag. Empty tag ends with /
+	
+	src attribute contain the path of image to be displayed.
+	
+	There are two type of path.
+	
+		1) Absolute Path means exact location of an image. 
+		
+		2) Relative Path means image location is according to its HTML web page location. We must use relative path only.
+		
+	width attribute decide the width of an image in web page. Width is counting according to pixel Its unit represent by px.
+	
+	height attribute decide the height of an image in web page.
+	
+	alt attribute represent alternate text when image does not available due to some reason. And according to W3C guideline, every img tag must have alt attribute.
+	
+	Internal processing of an image:-
+	
+		Whenever client generate a request to server of HTML web page, then, server only delivers HTML web page. And while rendering the HTML web page, and client encounter <img> tag then it generate a separate request to server for collecting this image. But if an image is already used by client then it does not generate its request again. Images are cached in browser memory.
+		
+		Website which have lots of images used in their web pages, they use different server to deliver the images. 
+		
+		So, the same logic is for video also.
+		
+	How to display information in tabular structure 
+	
+		For this we have table tag.
+		
+		1)	thead represent table heading section
+		
+		2) tbody represent table body section
+		
+		3) tr represent table row 
+		
+		4) th represent table heading 
+		
+		5) td table data 
+		
+	In website, there is special file which name is index.html and this file is treated as Home page of web site means if you use only domain name then this web page will be delivered.
+	
+How to link two web pages 
+
+	There is an anchor tag and it is represent by <a> tag.
+	
+	href attribute whose value indicate the resource to be linked.
+	
+	href value can be of two type
+		
+		1) Absolute
+		
+		2) Relative 
+	
+	target attribute decide where it will be opened.
+	
+	There are two type of link 
+	
+		1) internal 
+		
+		2) external 
+		
+Global attribute:- 
+
+	attribute which are for every element.
+	
+	1) id attribute used to identify an element using its value and this value should be unique.
+	
+	2) title attribute used to create tooltip of an element 
+	
+	I just share list of some global attribute but not its meaning. 
+	
+	class, style, name etc.
+	
+HTTP Request:- There are different type of HTTP request.
+
+	1) GET 
+	
+	2) POST 
+	
+	3) PUT 
+	
+	4) PATCH 
+	
+	5) DELETE 
+	
+	6) HEAD etc.
+	
+Part of GET request 
+
+	1) Request Body contains request method name, resource to be requested and separated with ? and some query string.
+	
+	Query String is a name value pair separated by = and pairs separated by &
+	
+	2) Request Header contains information about client
+	
+	For e.g. 
+	https://www.google.com/search?q=Good+Morning&source=hp&ei=GjoQY87mDe-NseMP6byMkA0&iflsig=AJiK0e8AAAAAYxBIKjbqr5VzHgVZBTZE1oFvFtT4jRc6&ved=0ahUKEwjO28rU5fL5AhXvRmwGHWkeA9IQ4dUDCAc&uact=5&oq=Good+Morning&gs_lcp=Cgdnd3Mtd2l6EAMyCwguELEDEIMBEJECMgsIABCxAxCDARCRAjILCAAQgAQQsQMQgwEyCwgAEIAEELEDEIMBMggIABCABBCxAzIFCAAQgAQyCwgAEIAEELEDEIMBMggIABCABBCxAzIICAAQsQMQgwEyCAgAEIAEELEDOgoIABDqAhC0AhBDOhAILhDHARDRAxDqAhC0AhBDOgQIABBDOgoIABCxAxCDARBDOhAILhCxAxCDARDHARDRAxBDOgcIABCxAxBDOg4ILhCABBCxAxDHARDRAzoHCC4QsQMQQzoICC4QgAQQsQM6EQguEIAEELEDEMcBENEDENQCOgUIABCRAjoKCC4QxwEQ0QMQQzoFCAAQsQNQRFiAEWDyEmgCcAB4AIABrQGIAccOkgEEMC4xM5gBAKABAbABCg&sclient=gws-wiz
+
+Part of POST request 
+		
+	1) Request Body contains request method name and resource to be requested	
+	
+	2) Request Header 
+	
+	3) Payload or Message body 
+	
+		Query String or form data or multipart data etc. 
+		
+When GET request is generated 
+
+	1) Whenever you type any url inside address bar of a web browser and click to go.
+	
+	2) Whenever you click on a link 
+	
+	3) Whenever you click on a submit button inside a form tag which have method attribute value set to GET.
+	
+	Note:- most of the request on internet are GET request.
+
+When POST request is generated 
+		
+	1) Whenever you click on a submit button inside a form tag which have method attribute value set to POST.
+	
+<form> tag 
+
+	This tag used for collecting information from an end user.
+	
+	method attribute default value is GET.
+	
+	action attriute default value is current HTML web page and it decide where form will be submitted.
+	
+<input> tag 
+
+	This tag provide different interface to collect information inside a <form> tag.
+	
+	type attribute decide the interface 
+	
+	name global attribute which decide the Query String name in <form> tag.
+	
+	According to W3C accessibility guideline, input element must be associate with any <label> tag.
+	
+	<textarea> tag is used for multiline text.
+	
+	Dropdown is build with the help of <select> tag.
+	
+	List or Listbox is build with the help of <select> tag.
+	
+CSS:- Cascading Style Sheet 
+	
+	It is a specification designed by W3C and these specification implemented by Web Browser.
+	
+	Each and every HTML element is designed according to CSS.
+	
+	Every web browser provide a stylesheet or CSS for all HTML element and this CSS is known as User Agent Stylesheet.
+	
+	There are CSS properties to change style of HTML element.
+	
+		property-name : value ;
+		
+		color : red;
+		
+	There are three way to apply CSS on HTML element.
+	
+		1) inline CSS:- we have to define css properties value using global style attribute of a HTML element. Good practice says avoid inline CSS.
+		
+		2) internal CSS:- we have to define style rule using CSS selector inside <style> tag. 
+		
+		3) external CSS:- we define style rule inside a separate file with extension .css using CSS selector and this file is linked with HTML web page using <link> tag.
+		
+	CSS Selector:- It is a way to select HTML element.
+	
+		1) Global Selector:- This is for all. 
+		
+			*
+			{
+			}
+			
+		2) Tag base Selector:- this selector apply CSS rule on the tag mention in selector.
+		
+			tag_name 
+			{
+			}
+		
+		Note:- inline CSS properties precedence is higher compare to others.
+
+		3) Class base selector:- this selector apply CSS rule on those tag whose class attribute value is class name. And this selector begin with dot.
+		
+			.class_name 
+			{
+			}
+			
+			<tag_name class="class_name"> 
+			
+			This selector is used when we want to use a style rule for multiple tags. 
+			
+			class_name never begin with digit and never contains spaces and specials symbol except underscore or dash. 
+			Note:- My personal preference is underscore.
+			
+			A tag can have more than one class names spearate by space. 
+			
+			class base selector has higher precedence as compare to tag base selector.
+			
+		4) ID base selector:- This selector apply CSS rule on those element whose id attribute value is given id_name. And this rule begin with #
+		
+			#id_name
+			{
+			}
+			
+			If you remember id attribute value should be unique in HTML document. In other word, this selector applied only one element.
+			
+			ID base has higher precendence compare to class base selector.
+			
+			id name follow same rule compare to class name.
+			
+			ID name and class name are case sensitive. 
+			
+		5) pseudo classes are pre-define in CSS and decide some interactive style. It had : in their definition.
+		
+			:hover
+			{
+			}
+			
+			Whenever cursor move to specific element.
+			
+Bad practice:- 
+
+	with the help !important we can change the precedence.
+	
+There are version in CSS 
+
+	1) CSS 1.0 
+	2) CSS 2.0
+	3) CSS 3.0
+	
+CSS Box Model:- 
+
+	According to CSS, every element is like a box. 
+	
+	<tag_name> Content of tag </tag_name>
+	
+	1) width property decide the width of content of tag. 
+	
+	2) height property decide the height of content of the tag.
+	
+	3) padding property decide the transparent area around content of tag.
+	
+	4) border property decide the colored area around the padding of tag.
+	
+	5) margin property decide the transparent area around the border of tag. 
+	
+	Total width of a tag:- left margin + left border + left padding + width + right padding + right border + right margin 
+	
+	Total height of a tag:- top margin + top border + top padding + height + bottom padding + bottom border + bottom margin 
+	
+Grouping Element:- 
+
+	1) div tag which is used to represent a division in HTML web page. It is a block level element and purely CSS manageable.
+	
+	2) span tag which is used to represent a specific area in HTML web page. It is a inline level element and purely CSS manageable.
+	
+How many way to define color in CSS:-
+
+	1) Color Name 
+	
+	2) Color Code begin with #RRGGBB
+		RR stands for Red 
+		GG stands for Green
+		BB stands for Blue
+		These have value in form of Hexa decimal number.
+		Hexa Decimal Number:- Base 16
+			Allowed Digit:- 0 to 9, A, B, C, D, E, F
+			
+			Here, FF means highest 
+			
+			#FFAACC
+			
+	3) rgb(red_value,green_value,blue_value) function 
+		This function accept three value in range of 0 to 255
+	
+	4) rgba(red_value,green_value,blue_value,alpha_value) function 
+		This function accept three value in range of 0 to 255
+		and last value in range of 0 to 1 which represent opacity.
+		
+position property:- 
+
+	It decide how element is positioned in web page.
+	
+	By default, position has static value which means element are arranged as they place in HTML web page.
+	
+	Allowed value for position:- 
+	
+		1) absolute make element position according to its position ancestor. If any parent of element has position property value then this element has position ancestor. If there is no position ancestor then its position according to body tag.
+		
+		Note:- when position property has value other than static then four properties are active.
+			top, left, right, bottom
+			
+		2) fixed make element position fixed to its viewport.
+		
+		3) relative make element position according to its original position.
+		
+		4) sticky make element normal as well as fixed on some condition.
+		
+display GRID property:- 
+
+	GRID is combination of rows and columns.
+	
+Size Rule:- 
+
+	1) Absolute Size represent by px 
+	
+	2) Relative Size according to parent em, rem and %
+
+display flex property:- 
+
+
+Git Concept:- 
+
+	Git feature give us two benefits.
+	
+	1) Repository means storage
+	
+	2) Version Control maintaing a file different version
+	
+We can work on Git feature in two ways.
+	
+	1) Local Repository
+	
+	2) Remote Repository
