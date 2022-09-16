@@ -596,4 +596,40 @@ JS is an Event Programming.
 
 	And being a developer, our task is to associate some function as an event handler to these event.
 
-	
+JS is capable to traverse HTML DOM as well as manipulate them.
+
+	document readymade object which represent HTML document. 
+
+	document.getElementById() 
+	document.getElementsByTagName()
+	document.getElementsByName()
+	document.getElementsByClassName()
+
+	JS is case sensitive language. 
+
+	Function name should follow camel Case. 
+	properties of an object follow camel Case.
+	And there are many properties in JS to manipulate an element.
+
+	There are some attribute of HTML element which normally begin with "on" word and used for binding Event Handler with event.
+
+	There is another way to achieve this by writing JS code also.
+
+		For this we have a function name addEventListener and this function is inside HTML node object.
+
+		For knowledge purpose, Event Listener and Event Handler contain same meaning.
+
+Syntax of defining Function in JS 
+
+	function keyword is used for such purpose and here keyword are reserved word in JS language. 
+
+	function function_name()
+	{
+
+	}
+
+	function_name(); // represent calling of that function
+
+
+
+
