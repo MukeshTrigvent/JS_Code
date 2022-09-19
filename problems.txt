@@ -1,0 +1,11 @@
+1) Make a form to collect ten number and calculate their sum.
+
+2) Make a form to collect principal, rate and year and calculate the simple interest.
+
+3) Make a form to collect two number and find out which one is largest.
+
+4) Make a form to collect two number and check out first number is divisible by second one or not.
+
+5) Make a form to collect X and Y co-ordinate and find out our point lies in which quadrant.
+There are special case like origin, X is zero or Y is zero.
+

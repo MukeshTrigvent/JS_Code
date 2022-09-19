@@ -630,6 +630,69 @@ Syntax of defining Function in JS
 
 	function_name(); // represent calling of that function
 
+Internally, every form element has value in string form.
 
++ has two meaning in JS.
 
+	1) with number it is an arithmetic operator 
 
+	2) with string it is a concatenation operator. This operator is used for joining one string to another type of value.
+
+To convert a string into int or float there are some predefined function in JS known as Conversion function.
+
+	parseInt(string)
+	parseFloat(string)
+
+Number System:- 
+
+	Computer allow 4 type of Number System.
+
+	1) Decimal Number System:- Base 10 means Allowed Digit 0 to 9 
+
+	2) Binary Number System:- Base 2 means Allowed Digit 0 and 1
+
+	3) Octal Number System:- Base 8 means Allowed Digit 0 to 7
+
+	4) Hexa Decimal Number System:- Base 16 Allowed Digit 0 to 9, A, B, C, D, E, F
+
+	In parseInt() radix represent base of number system. By default it is 10.
+
+Decision Making:- Decision always have two possibility. In JS, these possibility is better explained by boolean because boolean has only two value either true or false.
+
+	In coding, there are decision construct to achieve this.
+
+	1) if statement 
+
+		if( boolean_expression )
+		{
+			// if block of code 
+		}
+
+		boolean_expression means an expression which result in boolean. 
+
+		if boolean_expression gives true then it execute if block of code.
+
+	2) if else statement 
+
+		if( boolean_expression )
+		{
+			// if block of code 
+		}
+		else
+		{
+			// else block of code
+		}
+
+		else block never exists without associative if block
+
+		if boolean_expression gives false then it execute else block of code.
+
+	3) Nested if else statement 
+
+	4) else if statement 
+
+Programming Trick:- 
+
+	Like Theorem, we predict something and perform all operation based upon it. And at the last we found our assumption is right or wrong.
+
+	
