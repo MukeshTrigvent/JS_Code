@@ -9,3 +9,20 @@
 5) Make a form to collect X and Y co-ordinate and find out our point lies in which quadrant.
 There are special case like origin, X is zero or Y is zero.
 
+6) Input three number and find out the largest one. There are some catch to test it.
+
+Sample Values:- 
+    n1  n2  n3  Output
+    5   5   5   All three number are equal
+    5   5   2   First and Second number are largest 
+    2   5   5   Second and Third number are largest 
+    5   2   5   First and Third number are largest
+    5   6   7   Third number is largest 
+    7   6   5   First number is largest 
+    5   7   6   Second number is largest
+
+7) Input ten number and find out the largest one and display it.
+
+8) Input five subject marks, calculate their total and find out its aggregate and percentage. And according to percentage give them grade and Also accept person name.
+There must be an extra condition subject marks must be between 0 to 150.
+

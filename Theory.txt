@@ -689,10 +689,55 @@ Decision Making:- Decision always have two possibility. In JS, these possibility
 
 	3) Nested if else statement 
 
+		We can define if statement or if else statement inside another if statement or else statement.
+
 	4) else if statement 
 
 Programming Trick:- 
 
 	Like Theorem, we predict something and perform all operation based upon it. And at the last we found our assumption is right or wrong.
 
+Relational Operator or Comparison Operator:- 
+
+	These operator are used to compare two values and return result in boolean. 
+
+	> greater than 
+	< less than 
+	>= greater than equal to 
+	<= less than equal to 
+	== equal to 
+	!= not equal to 
+
+Math Concepts:- 
+
+	Let us conside a Decimal Number (Base 10)
 	
+		12345
+
+	Face Value:- Digit at Unit Place, Digit at 10th Place and so on
+
+	Place Value:- Unit Place, 10th Place, 100th Place, 1000th Place and so on.
+
+	1 is at 10000th Place 
+	2 is at 1000th Place 
+	3 is at 100th Place 
+	4 is at 10th Place 
+	5 is at Unit Place and Unit Place is represent by 1 also. 
+
+	12345 = 1 * 10000 + 2 * 1000 + 3 * 100 + 4 * 10 + 5 * 1
+
+	We can also convert it in form of its Base 
+
+	12345 = 1 * 10 ^ 4 + 2 * 10 ^ 3 + 3 * 10 ^ 2 + 4 * 10 ^ 1 + 5 * 10 ^ 0
+
+	Here ^ represent raised to 
+	
+	There are some mathematical function in JS.
+
+		Math.floor()
+		Math.ceil()
+		Math.abs()
+		Math.sqrt()
+		Math.pow()
+		Math.log()
+		Math.log10()
