@@ -693,6 +693,8 @@ Decision Making:- Decision always have two possibility. In JS, these possibility
 
 	4) else if statement 
 
+		If you found only if statement or if else statement inside another else statement then we can replace nested if else structure with else if statement. It make our code less nested.
+
 Programming Trick:- 
 
 	Like Theorem, we predict something and perform all operation based upon it. And at the last we found our assumption is right or wrong.
@@ -741,3 +743,43 @@ Math Concepts:-
 		Math.pow()
 		Math.log()
 		Math.log10()
+
+We are using concatenation for joining one string to another data type value.
+
+In JS, there is concept of Temporal Literal which is a best choice to use string with other type of value as compare to concatenation.
+
+	Temporal Literal or Temporal String is represent by backtick.
+
+	` `
+
+	In Temporal Literal, with ${variable_name} we use variable value directly.
+
+Logical Operator:- 
+
+	These operator are used to join two condition or boolean expression and return result in form of boolean.
+
+	&& AND Operator
+
+		A > 10 && B > 10
+		true && true = true
+		true && false = false
+		false && true = false
+		false && false = false
+
+		If first condition gives false then Logical AND operator never check second condition and return false as a result. Due to this, it is known as Short Circuit Logical Operator.
+
+	|| OR Operator 
+
+		A > 10 || B > 10
+		true || true = true
+		true || false = true
+		false || true = true
+		false || false = false
+
+		If first condition gives true then Logical OR operator never check second condition and return true as a result. Due to this, it is known as Short Circuit Logical Operator.
+
+	! Negation or NOT Operator 
+
+		! A > 10 
+		! true = false 
+		! false = true 

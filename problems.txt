@@ -26,3 +26,28 @@ Sample Values:-
 8) Input five subject marks, calculate their total and find out its aggregate and percentage. And according to percentage give them grade and Also accept person name.
 There must be an extra condition subject marks must be between 0 to 150.
 
+9) Input any year and check it is leap or not.
+
+10) Input any day number and display its equivalent day name. 
+I assume 1 represent Monday and so on. If user enter different number other than 1 to 7 then display Invalid Day Number.
+
+11) Input any amount and your program tell us how many notes will be accomodate for this amount.
+
+Assignment:-  Input any number and display it in words.
+Let us assume number is 999999999
+Then message will be
+Ninety Nine Crore Ninety Nine Lakh Ninety Nine Thousand Nine Hundred Ninety Nine.
+
+Hint:- 1 is One. 
+    if( num == 1 )
+    {
+        message = "One";
+    }
+    ...
+    Zero to Nineteen wording are unique.
+    Twenty to Ninety wording are unique.
+    Thousand, Lakh and Crore are unique.
+
+    There is corner case. If number is Zero and Negative.
+
+

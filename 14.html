@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findLargest() {
+            var numObj = document.getElementById("num1");
+            var num1 = numObj.value;
+            var num2 = document.getElementById("num2").value;
+            var num3 = document.getElementById("num3").value;
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            num3 = parseInt(num3);
+
+            // My assumption is every thing is smooth.
+            // For this assumption I pick a variable
+            var allValid = true;
+            // There is readymade function isNaN() which tell us either variable contain NaN or not.
+            if (isNaN(num1)) {
+                allValid = false;
+            }
+
+            if (isNaN(num2)) {
+                allValid = false; // My Assumption is getting wrong.
+            }
+            if (isNaN(num3)) {
+                allValid = false;
+            }
+            var message = "";
+            if (allValid) {
+                if(num1 == num2 ) { // num1 is equal to num2 
+                    if(num1 == num3 ) {// num1 is equal to num3 
+                        message = "All three number are equal.";
+                    }else{ // num1 is not equal to num3 but equal to num2
+                        if( num1 > num3 ){ // num1 is greater than num3
+                            message = "First and Second number are Largest.";
+                        }else{ // num1 is not greater than num3
+                            message = "Third number is Largest.";
+                        }
+                    }
+                } else { // num1 is not equal to num2
+                    if(num1==num3){ // num1 is equal to num3
+                        if(num1 > num2 ){ // num1 is greater than num2
+                            message = "First and Third number are Largest.";
+                        }else{// num1 is not greater than num2
+                            message = "Second number is Largest.";
+                        }
+                    }else{ // num1 is not equal to num3 
+                        if(num2 == num3 ){ // num2 is equal to num3 
+                            if( num2 > num1 ){ // num2 is greater than num1
+                                message = "Second and Third number are Largest.";
+                            }else{// num2 is not greater than num1
+                                message = "First number is Largest.";
+                            }
+                        }else{ // num2 is not equal to num3 which means no number is equal
+                            if( num1 > num2 ){ // num1 is greater than num2
+                                if( num1 > num3 ){ // num1 is greater than num3
+                                    message = "First number is Largest.";
+                                }else{ // num1 is not greater than num3
+                                    message = "Third number is Largest.";
+                                }
+                            }else{ // num1 is not greater than num2
+                                if( num2 > num3 ){ // num2 is greater than num3
+                                    message = "Second number is Largest.";
+                                }else{ // num2 is not greater than num3
+                                    message = "Third number is Largest.";
+                                }
+                            }   
+                        }
+                    }
+                }
+            } else {
+                message = "Please Enter Valid Number";
+            }
+            document.getElementById("message").innerHTML = message;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label for="num1">Enter First Number: </label>
+        <input type="text" name="num1" id="num1"><br><br>
+        <label for="num2">Enter Second Number: </label>
+        <input type="text" name="num2" id="num2"><br><br>
+        <label for="num3">Enter Third Number: </label>
+        <input type="text" name="num3" id="num3"><br><br>
+        <input type="button" onclick="findLargest()" value="Find Largest" />
+    </form>
+    <h1 id="message"></h1>
+</body>
+
+</html>
