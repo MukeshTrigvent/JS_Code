@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showMessage(){
+            var result = "";
+            var count; // I treat this variable as counter variable
+            for( count = 1024; count >= 2; count = count / 2){
+                result += "<h1>Hello World!!!</h1>";
+            }
+            document.getElementById("message").innerHTML = result;
+        }
+        // count = 1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1 stop
+    </script>
+</head>
+<body>
+    <button type="button" onclick="showMessage()">Show Messages</button>
+    <div id="message">
+
+    </div>
+</body>
+</html>

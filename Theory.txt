@@ -783,3 +783,67 @@ Logical Operator:-
 		! A > 10 
 		! true = false 
 		! false = true 
+
+Arithmetic Assignment Operator and also known as Short Hand Operator 
+
+	a += 10; is equal to a = a + 10;
+	a *= 10; is equal to a = a * 10;
+	a -= 10; is equal to a = a - 10;
+	a /= 10; is equal to a = a / 10;
+	a %= 10; is equal to a = a % 10;
+
+Loop:- It is an arrangement of repeating some statement more than once. Loop focus upon repetition or iteration.
+
+	There are two type of Loop.
+
+	1) Fixed Loop:- where number of iteration or repetition is controlled by developer of progarm. 
+
+	2) Variable Loop or Odd Loop:- where number of iteration or repetition is controlled by end user of program.
+
+	In a program, there are two person involved.
+
+		1) Developer:- who build the program  
+
+		2) End User:- who use the program  
+
+	How to manage Iteration or Repetition in Loop 
+
+		1) Initialize a counter variable 
+
+		2) Check the Loop Execution condition based upon counter variable. If this condition is true then Loop Body execute otherwise Loop working is stop. 
+		Here Loop Body means set of statement which you want to repeat. 
+
+		3) We have to re-initialize our counter variable in such a manner that it approaches to un-satisfy the Loop Execution Condition after giving desire iteration.
+
+Looping Construct in JS 
+
+	There are three looping construct in JS 
+
+	1) for Loop 
+
+	2) while Loop 
+
+	3) do while Loop 
+
+for Loop construct:-
+
+	for( Initialization; Loop Execution Condition; Re-Initialization )
+	{
+		Loop Body
+	}
+
+	Step 1:- Initialization 
+
+	Step 2:- check LEC if it is true then Step 3 is executed otherwise it exit from Loop Block.
+
+	Step 3:- execute the Loop Body 
+
+	Step 4:- Re-Initialization and after that jump to Step 2
+
+	Observation:- 
+
+		1) Initialization happen only once.
+
+		2) for Loop is an Entry controller Loop which means if Loop Execution Condition is true then it will enter inside Loop body.
+
+		3) Variable involved in LEC is consider as Counter Variable. Counter variable can be a single variable or set of variable.

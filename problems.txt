@@ -51,3 +51,46 @@ Hint:- 1 is One.
     There is corner case. If number is Zero and Negative.
 
 
+12) Print First 20 Even Number Series 
+
+    2, 4, 6, 8 ....
+
+13) Enter a number and print first that number even number series 
+
+    Number:- 50 
+
+    2, 4, 6, ..... 50
+
+14) Enter a number and print all even number series element term equal to that number .
+
+    Number:- 5 
+
+    2, 4, 6, 8, 10
+
+15) Print First 15 Fibonacci series element  
+
+    0, 1, 1, 2, 3, 5, 8, 13, ...
+
+16) Print First 15 Thibonacci series element
+
+    0, 1, 1, 2, 4, 7, 13....
+
+17) Enter a Number and Print its Table.
+
+    Number :- 5 
+
+    Output:- 
+
+    5 x 1 = 5
+    5 x 2 = 10
+    5 x 3 = 15
+    5 x 4 = 20
+    ...
+
+18) Print First 15 given series element 
+
+    0, 3, 8, 15, 24, 35, 48, ....
+
+
+
+
