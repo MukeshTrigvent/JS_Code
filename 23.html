@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function showResult() {
+            var amount = document.getElementById("amount").value;
+            amount = parseInt(amount);
+            var result = "";
+            if (isNaN(amount)) {
+                result = 'Not a valid amount given';
+            } else {
+                var quotient = Math.floor(amount / 2000);
+                if(quotient!=0){
+                    result += `Number of 2000 Notes: ${quotient}<br>`;
+                }
+                amount = amount % 2000;
+                quotient = Math.floor(amount / 500);
+                if(quotient!=0){
+                    result += `Number of 500 Notes: ${quotient}<br>`;
+                }
+                amount = amount % 500;
+                quotient = Math.floor(amount / 200);
+                if(quotient!=0){
+                    result += `Number of 200 Notes: ${quotient}<br>`;
+                }
+                amount = amount % 200;
+                quotient = Math.floor(amount / 100);
+                if(quotient!=0){
+                    result += `Number of 100 Notes: ${quotient}<br>`;
+                }
+                amount = amount % 100;
+                quotient = Math.floor(amount / 50);
+                if(quotient!=0){
+                    result += `Number of 50 Notes: ${quotient}<br>`;
+                }
+                amount = amount % 50;
+                quotient = Math.floor(amount / 20);
+                if(quotient!=0){
+                    result += `Number of 20 Notes: ${quotient}<br>`;
+                }
+                amount = amount % 20;
+                quotient = Math.floor(amount / 10);
+                if(quotient!=0){
+                    result += `Number of 10 Notes: ${quotient}<br>`;
+                }
+                amount = amount % 10;
+                quotient = Math.floor(amount / 5);
+                if(quotient!=0){
+                    result += `Number of 5 Notes: ${quotient}<br>`;
+                }
+                amount = amount % 5;
+                quotient = Math.floor(amount / 2);
+                if(quotient!=0){
+                    result += `Number of 2 Notes: ${quotient}<br>`;
+                }
+                amount = amount % 2;
+                quotient = amount;
+                if(quotient!=0){
+                    result += `Number of 1 Notes: ${quotient}<br>`;
+                }
+            }
+            document.getElementById("message").innerHTML = `<h1>${result}</h1>`;
+        }
+    </script>
+</head>
+
+<body>
+    <label for="amount">Enter Any Amount: </label>
+    <input type="text" name="amount" id="amount">
+    <button type="button" onclick="showResult()">Show Result</button>
+    <div id="message">
+
+    </div>
+</body>
+
+</html>

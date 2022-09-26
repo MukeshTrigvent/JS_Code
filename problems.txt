@@ -91,6 +91,24 @@ Hint:- 1 is One.
 
     0, 3, 8, 15, 24, 35, 48, ....
 
+19) Input any number and calculate its sum of first and last digit.
+    For e.g. number is 12345
+    1 + 5 = 6
 
+20) Input any number and calculate its sum of digit except first and last digit.
+    For e.g. number is 12345
+    2 + 3 + 4 = 9
+
+21) Input any number and calculate its reverse.
+    For e.g. number is  12345
+    Reverse:- 54321
+
+22) Input two number and calculate its HCF and LCM.
+
+23) Input any number and check it is prime or not.
+
+24) Input any number and check its prime factor.
+
+25) Input any number and display all its factor.
 
 

@@ -847,3 +847,70 @@ for Loop construct:-
 		2) for Loop is an Entry controller Loop which means if Loop Execution Condition is true then it will enter inside Loop body.
 
 		3) Variable involved in LEC is consider as Counter Variable. Counter variable can be a single variable or set of variable.
+
+while Looping construct 
+
+	Initialization;
+	while(  Loop Execution Condition )
+	{
+		Loop Body
+		Re-Initialization
+	}
+
+	Step 1:- Initialization 
+
+	Step 2:- check LEC if it is true then Step 3 is executed otherwise it exit from Loop Block.
+
+	Step 3:- execute the Loop Body 
+
+	Step 4:- Re-Initialization and after that jump to Step 2
+
+	Observation:- 
+
+		1) Initialization happen only once.
+
+		2) while Loop is an Entry controller Loop which means if Loop Execution Condition is true then it will enter inside Loop body.
+
+		3) Variable involved in LEC is consider as Counter Variable. Counter variable can be a single variable or set of variable.
+
+do while Looping construct 
+
+	Initialization;
+	do
+	{
+		Loop Body
+		Re-Initialization
+	}
+	while(  Loop Execution Condition );
+
+	Step 1:- Initialization 
+
+	Step 2:- execute the Loop Body 
+
+	Step 3:- Re-Initialization
+
+	Step 4:- check LEC if it is true then Step 2 is executed otherwise it exit from Loop Block.
+
+	Observation:- 
+
+		1) Initialization happen only once.
+
+		2) do while Loop is an Exit controller Loop which means if Loop Execution Condition checked at the end of the Loop Block. In other word, this loop will execute at least once.
+
+		3) Variable involved in LEC is consider as Counter Variable. Counter variable can be a single variable or set of variable.
+
+Calculate Sum of Digit 
+
+	Decimal Number System has base 10
+
+	12345 
+
+	12345 % 10 = 5 (It give us last digit of given number)
+	Math.floor(12345 / 10) = Math.floor(1234.5) = 1234 (It remove the last digit of given number)
+
+	Any number is divisible by its base. 
+	Any number is divisible by its base.
+
+Programming Trick 
+
+	We create an extra variable to maintain original value of variable and perform all operation on these variable. These variable known as temporary variable.
