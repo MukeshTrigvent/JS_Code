@@ -914,3 +914,15 @@ Calculate Sum of Digit
 Programming Trick 
 
 	We create an extra variable to maintain original value of variable and perform all operation on these variable. These variable known as temporary variable.
+
+Nested Loop 
+
+	Loop can be define inside another loop.
+
+Pattern Question
+
+	1) Count the total number of rows 
+
+	2) Find the relationship between column display value with row number. 
+
+	3) Printing always begin from left to right.

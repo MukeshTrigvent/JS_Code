@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display() {
+            var result = "";
+            var row, col;
+            for( row = 1; row <= 5; row++){
+                for(col = 1; col <= 6 - row; col++){
+                    result += row;
+                }
+                // How to generate row in HTML.
+                // <br> can be used
+                result += "<br>";
+            }
+            document.getElementById("message").innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+   <button type="button" onclick="display()">Display Pattern</button>
+    <div id="message">
+
+    </div>
+</body>
+
+</html>

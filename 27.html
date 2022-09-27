@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calculate() {
+            var num = document.getElementById("num").value;
+            num = parseInt(num);
+            var result = "";
+            if (isNaN(num)) {
+                result = 'Not a valid number';
+            } else {
+                var digit, sum = 0;
+                var temp = num;
+
+                if(temp<0){
+                    // temp = temp * -1;
+                    temp = -temp; // - Unary Minus Operator
+                }
+                digit = 0;
+                sum = temp % 10; // It give us last digit of a number
+                // why 9?
+                // It is the largest number in single digit
+                while (temp > 9) {
+                    digit = temp % 10;                    
+                    temp = Math.floor(temp / 10);
+                }
+                sum = sum + digit;
+                result = `<h1>Sum of First and Last Digit of Given Number(${num}): ${sum}</h1>`;
+            }
+            document.getElementById("message").innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+    <label for="num">Enter any Number: </label>
+    <input type="text" name="num" id="num">
+    <button type="button" onclick="calculate()">Calculate Sum of Digit</button>
+    <div id="message">
+
+    </div>
+</body>
+
+</html>
