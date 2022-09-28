@@ -926,3 +926,51 @@ Pattern Question
 	2) Find the relationship between column display value with row number. 
 
 	3) Printing always begin from left to right.
+
+Organization of Code concept is begin.
+
+	Function is a set of instruction which is group under a name called Function name. And this set of instruction will be executed when we call them. 
+
+	Normal Function Definition:-
+
+		function function_name(){
+
+		}
+
+		function_name() // Calling of Function 
+
+	Function with Parameter:- On the time of function calling we pass additional information to control the functionality of Function.
+		These additional information passed in parameter is called Argument.
+
+		What is Parameter? 
+			Technically Parameter is a variable. 
+
+		function function_name(list of parameters){
+
+		}
+
+		function_name( arguments according to parameter);
+
+	Function with Return Type:- In JS, there is no concept of Return Type But function is capable to return some value to its caller (the place where function is called).
+
+		For e.g. Math.floor() function accept a number and return us floored value of that number. 
+
+			temp = Math.floor(temp / 10);
+
+		function function_name(){
+			return statement 
+		}
+
+		return statement is used to return value from a function.
+
+		And remember return means exit from function.
+
+There are some priniciple of Organization:- 
+
+	1) Function must be reusable and provide only functionality.
+
+	2) Function code be readable.
+
+
+
+
