@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display() {
+            // Question No 31
+            // Total Rows:- 5
+            // Star Space Star
+            // 1 Star 8 Space 1 Star
+            // 2 Star 6 Space 2 Star
+            // 3 Star 4 Space 3 Star
+            // 4 Star 2 Space 4 Star
+            // 5 Star 0 Space 5 Star
+            var result = "";
+            var row, col;
+            for( row = 1; row <= 5; row++){
+                for(col = 1; col <= row; col++){
+                    result += "*";
+                }
+                for(col = 1; col <= 2 * ( 5 - row); col++){
+                    result += "&nbsp;&nbsp;";
+                }
+                for(col = 1; col <= row; col++){
+                    result += "*";
+                }
+                result += "<br>";
+            }
+            document.getElementById("message").innerHTML = result;
+        }
+    </script>
+</head>
+
+<body>
+   <button type="button" onclick="display()">Display Pattern</button>
+    <div id="message">
+
+    </div>
+</body>
+
+</html>

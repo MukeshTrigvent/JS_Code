@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function findLargest() {
+            var numbers = []; // To declare an empty array
+            for(var id = 1; id <= 10; id++){
+                var num = document.getElementById("num" + id).value;
+                num = parseInt(num);
+                numbers.push(num);
+            }
+            // My assumption is every thing is smooth.
+            // For this assumption I pick a variable
+            var allValid = true;
+            // There is readymade function isNaN() which tell us either variable contain NaN or not.
+            for(var index = 0; index < numbers.length; index++){
+                if(isNaN(numbers[index])){
+                    allValid = false;
+                }
+            }
+            var message = "";
+            if (allValid) {
+                // Memoziation or DP (Dynamic Programming)
+                var largest = numbers[0];
+                for(var index = 1; index < numbers.length; index++){
+                    if(largest < numbers[index]){
+                        largest = numbers[index];
+                    }
+                }
+                message = `Largest Number is ${largest}`;
+            } else {
+                message = "Please Enter Valid Number";
+            }
+            document.getElementById("message").innerHTML = message;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label for="num1">Enter First Number: </label>
+        <input type="text" name="num1" id="num1"><br><br>
+        <label for="num2">Enter Second Number: </label>
+        <input type="text" name="num2" id="num2"><br><br>
+        <label for="num2">Enter Second Number: </label>
+        <input type="text" name="num2" id="num2"><br><br>
+        <label for="num2">Enter Third Number: </label>
+        <input type="text" name="num3" id="num3"><br><br>
+        <label for="num2">Enter Fourth Number: </label>
+        <input type="text" name="num4" id="num4"><br><br>
+        <label for="num2">Enter Fifth Number: </label>
+        <input type="text" name="num5" id="num5"><br><br>
+        <label for="num2">Enter Sixth Number: </label>
+        <input type="text" name="num6" id="num6"><br><br>
+        <label for="num2">Enter Seventh Number: </label>
+        <input type="text" name="num7" id="num7"><br><br>
+        <label for="num2">Enter Eighth Number: </label>
+        <input type="text" name="num8" id="num8"><br><br>
+        <label for="num2">Enter Ninth Number: </label>
+        <input type="text" name="num9" id="num9"><br><br>
+        <label for="num2">Enter Tenth Number: </label>
+        <input type="text" name="num10" id="num10"><br><br>
+        <input type="button" onclick="findLargest()" value="Find Largest" />
+    </form>
+    <h1 id="message"></h1>
+</body>
+
+</html>

@@ -971,6 +971,12 @@ There are some priniciple of Organization:-
 
 	2) Function code be readable.
 
+Array:- 
+
+	It is a collection of element or variable which are refer by a common name. To differentiate these variable there is concept of index number. Array index begin from 0.
+
+	var values = [11,22,33,44,55,66,77,88];
+
 
 
 

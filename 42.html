@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(){
+            var items = document.getElementsByName("common");
+            
+            console.log(items.length);
+            for(let index = 0; index < items.length; index++){
+                items[index].style.color = "red";
+                items[index].style.backgroundColor = "yellow";
+                // console.log(typeof(items[index].style));
+            }
+        }
+    </script>
+</head>
+<body>
+    <p name="common">First</p>
+    <p style="color:green;">Second</p>
+    <p name="common">Third</p>
+    <button onclick="change()">Change</button>
+</body>
+</html>

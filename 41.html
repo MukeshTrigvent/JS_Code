@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+            var items = document.getElementsByTagName("p");
+            console.log(typeof(items));
+            console.log(items.length);
+            for(var index = 0; index < items.length; index++){
+                console.log(items[index].textContent);
+                items[index].innerHTML = "Good Job";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>First</p>
+    <p>Second</p>
+    <p>Third</p>
+    <button onclick="display()">Display in Console</button>
+</body>
+</html>
