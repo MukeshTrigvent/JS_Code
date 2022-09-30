@@ -977,6 +977,25 @@ Array:-
 
 	var values = [11,22,33,44,55,66,77,88];
 
+document.querySelector() It accept CSS selector and search the item based upon it and it return only one reference.
+
+document.querySelectorAll() It accept CSS selector and search the item based upon it and it return more than one reference if found.
+
+Function Points:- 
+
+	1) We can store function reference in variable name.
+
+	2) We can also define an Anonymous function. A function which have no name.
+		function(){
+
+		}
+
+	3) We can have parameter in a function. Parameter is a variable. We know a variable can store function reference. In crux, we can pass a function reference as an argument to function parameter. When this happens it is known as Callback.
+
+setTimeout(function_reference or callback,delay in miliseconds);
+	1000 miliseconds = 1 second 
+
+
 
 
 

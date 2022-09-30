@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>        
+        function change(){
+            alert("Welcome To Learn Things");
+        }
+
+        function call(fun){
+            // Here fun is a parameter which contain reference of a function
+            fun();
+        }
+
+        var newFun = function(){
+            call(change); // Passing change function reference inside call function as parameter value
+        }
+    </script>
+</head>
+<body>
+    <button onclick="newFun()">Change</button>
+</body>
+</html>

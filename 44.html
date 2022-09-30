@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function change(){
+            // CSS Selector
+            // Class Base Selector It begin from dot.
+            var item = document.querySelector(".common");
+            item.style.color = "blue";
+        }
+    </script>
+</head>
+<body>
+    <p class="common">First</p>
+    <p style="color:green;">Second</p>
+    <p class="common">Third</p>
+    <button onclick="change()">Change</button>
+</body>
+</html>

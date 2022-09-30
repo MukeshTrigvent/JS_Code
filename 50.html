@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>        
+       var message = ["G","o","o","d"," ","M","o","r","n","i","n","g"];
+       var index = 0;
+       function newFun(){
+        // console.log(" Yes I am called.");
+        if(index < message.length){
+            document.getElementById("message").innerHTML += message[index];
+            index++;
+            setTimeout(newFun,1000);            
+        }        
+       }
+    </script>
+</head>
+<body>
+    <button onclick="newFun()">Change</button>
+    <h1 id="message"></h1>
+</body>
+</html>

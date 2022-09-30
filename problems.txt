@@ -217,4 +217,9 @@ Hint:- 1 is One.
         2) Stone is stronger than Scissor because Stone can break the Scissor.
         3) Scissor is stronger than Paper because Scissor can cut the Paper.
 
+41) Create two button and one heading for displaying message.
+    First button represent Start and Second button represent Stop.
+    heading display message in this format 05:00
+    When you click on start button, then, it start a decrement in display time.
+    When you click on stop button, then, it pause the decrement of time.
         
