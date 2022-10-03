@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Forget this code
+        function show1(e){
+            console.log(e.bubbles);
+            if(!e.bubbles){
+                console.log("div Show is Clicked");
+            }
+        }
+        function show2(e){
+            e.stopPropagation();
+            console.log("h1 Show is Clicked");
+        }
+    </script>
+</head>
+<body>
+    <div onclick="show1(event)">
+        Hello World This is good.
+        <h1 onclick="show2(event)">Good Morning</h1>
+    </div>
+</body>
+</html>

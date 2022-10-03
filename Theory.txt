@@ -995,7 +995,56 @@ Function Points:-
 setTimeout(function_reference or callback,delay in miliseconds);
 	1000 miliseconds = 1 second 
 
+Storage in JS:-
 
+	There are two way to store information permanent in Browser memory.
 
+	1) Session Storage data will remain in memory until browser is opened.
 
+		window.sessionStorage.setItem(key,value);
+		window.sessionStorage.getItem(key); 
+		window.sessionStorage.removeItem(key); 
 
+	2) Local Storage data will remain after browser is closed.
+
+		window.localStorage.setItem(key,value);
+		window.localStorage.getItem(key);
+		window.localStorage.removeItem(key); 
+
+Window load Event is fired when a HTML document is completely load in browser memory.
+
+	For attaching event handler with load event there is onload attribute.
+
+blur event
+	When an input element loses its focus.
+
+	onblur attribute is used to attaching Event Handler with blur event.
+
+key event 
+	When an input element is interact with keyboard then these key event fired.
+
+	keydown event 
+
+		Keydown happens when the key is pressed down, and auto repeats if the key is pressed down for long.
+
+	keypress event 
+
+		This event is fired when an alphabetic, numeric, or punctuation key is pressed down.
+
+	keyup event 
+
+		Keyup happens when the key is released.
+
+	onkeydown, onkeypress and onkeyup are attribute for attaching Event handler to these event respectively.
+
+window.event object 
+
+	Every event has some additional information related to that event. This additional information is represent by window.event object.
+
+	Every event object has a specific function named preventDefault() which stop the event natural working.
+
+Event Propagation 
+
+	Event Bubbling which means if child element event is raised then its associate event handler is executed. But if its parent element has any event handler associate with this event, then it also happens.
+
+	We are capablt to stop event Propagation by calling event object stopPropagation() function.

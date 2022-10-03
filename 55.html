@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function perform(e){
+            // console.log(typeof(e));
+            // console.log(event.key);
+            let digit = parseInt(event.key);
+            if(isNaN(digit)){
+                console.log(" No it is not a digit");                
+                if(event.key != 'Backspace'){
+                    event.preventDefault();
+                }                
+            }else{
+                console.log(" YES it is a digit");
+                
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="num1">Enter First Number: </label>
+        <input type="text" onkeydown="perform(event)" name="num1" id="num1"><br><br>
+        
+    </form>
+    <h1 id="message"></h1>
+</body>
+</html>

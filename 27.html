@@ -25,11 +25,14 @@
                 sum = temp % 10; // It give us last digit of a number
                 // why 9?
                 // It is the largest number in single digit
-                while (temp > 9) {
-                    digit = temp % 10;                    
-                    temp = Math.floor(temp / 10);
+                if(temp>9){
+                    while (temp > 0) {
+                        digit = temp % 10;                    
+                        temp = Math.floor(temp / 10);
+                    }
+                    sum = sum + digit;
                 }
-                sum = sum + digit;
+                
                 result = `<h1>Sum of First and Last Digit of Given Number(${num}): ${sum}</h1>`;
             }
             document.getElementById("message").innerHTML = result;
