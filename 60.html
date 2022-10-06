@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            // Question No 35
+            // Total Rows = 9
+            // Style of Pattern 
+            // Space Star
+            // 4     1
+            // 3     3
+            // 2     5
+            // 1     7
+            // 0     9
+            // 1     7
+            // 2     5
+            // 3     3
+            // 4     1
+            var message = "";
+            var space = 4;
+            var star = 1;
+            for( var row = 1; row <= 9; row++){
+                for(var col = 1; col <= space; col++){
+                    message += "&nbsp;&nbsp;";
+                }
+                for(var col = 1; col <= star; col++){
+                    message += "*";
+                }
+                message += "<br>";
+                if(row<5){
+                    space--;
+                    star+=2; // star = star + 2;
+                }else{
+                    space++;
+                    star-=2;
+                }
+            }
+            document.getElementById("message").innerHTML = message;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="show()">Display Pattern</button>
+    <h1 id="message"></h1>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            // First Even Number is 2
+            // Next Even Number is 4
+            // and NExt one is 6
+            // We conclude next even number = previous even number + 2 
+            let message = "";
+            for( var even = 2; even <= 40; even = even + 2){
+                message += even + " ";
+            }
+            document.getElementById("message").innerHTML = message;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="show()">Display Pattern</button>
+    <h1 id="message"></h1>
+</body>
+</html>

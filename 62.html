@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function generateRandomColor(){
+            var hexCode = Math.random() * 16777215;
+            hexCode = Math.floor(hexCode);
+            hexCode = "#" + hexCode.toString(16);
+            return hexCode;
+        }
+        function change(){
+            var whiteColor = generateRandomColor();
+            var blackColor = generateRandomColor();
+            var allBlacks = document.getElementsByClassName("black_box");
+            var allWhites = document.getElementsByClassName("white_box");
+            for(var index = 0; index < allBlacks.length; index++){
+                allBlacks[index].style.backgroundColor = blackColor;
+            }
+            for(var index = 0; index < allWhites.length; index++){
+                allWhites[index].style.backgroundColor = whiteColor;
+            }
+        }
+        
+    </script>
+    <style>
+        #chessboard{
+            width:512px;
+            margin:10px auto;
+            background-color: white;
+            border:1px solid black;
+            height: 512px;
+        }
+        .row{
+            float:left;
+        }
+        .row::after{
+            content:"";
+            clear:both;
+            display: table;
+        }
+        .black_box,.white_box{
+            width:64px;
+            height:64px;
+            /* display:inline-block; */
+        }
+        .black_box{
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="change()">Change Color</button><br>
+    <div id="chessboard">
+        <div class="row">
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+        </div>
+        <div class="row">
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+        </div>
+        <div class="row">
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+        </div>
+        <div class="row">
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+        </div>
+        <div class="row">
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+        </div>
+        <div class="row">
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+        </div>
+        <div class="row">
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+        </div>
+        <div class="row">
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+            <div class="white_box"></div>
+            <div class="black_box"></div>
+        </div>
+    </div>
+</body>
+</html>

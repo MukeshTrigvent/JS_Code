@@ -1048,3 +1048,15 @@ Event Propagation
 	Event Bubbling which means if child element event is raised then its associate event handler is executed. But if its parent element has any event handler associate with this event, then it also happens.
 
 	We are capablt to stop event Propagation by calling event object stopPropagation() function.
+
+var vs let 
+
+	There are two type of variable.
+
+	1) Local variable:- Local variable is available to the block in which it defined.
+
+	2) Global variable:- Global variable is available in any block of the code.
+
+	var variable is defined and we can define it more than once in code.
+	let variable is defined and we can define it only once.
+	var variable is available in code before defining.

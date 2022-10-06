@@ -27,6 +27,11 @@ Sample Values:-
 There must be an extra condition subject marks must be between 0 to 150.
 
 9) Input any year and check it is leap or not.
+Firstly check year is divisible by 100 or not.
+If yes 
+    then check given year is divisible by 400 or not 
+If no 
+    then check given year is divisible by 4 or not 
 
 10) Input any day number and display its equivalent day name. 
 I assume 1 represent Monday and so on. If user enter different number other than 1 to 7 then display Invalid Day Number.
@@ -201,6 +206,7 @@ Hint:- 1 is One.
 
 38) Create a 8 by 8 board and initially it follow two color black and white.
     There is a button and when we click this button then two different color is generated randomly and board is redesigned.
+    -- Now you have to memorization of selected color on opening of this page again.
 
 39) Prepare a Form with Five textfield to accept numbers and there are two  button.
     First button text is Sort Ascending and we click this button then it sort the all textfield number into ascending order.

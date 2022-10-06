@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function show(){
+            // Question No 37
+            // Total row 5
+            // Space Number Number
+            var message = "";
+            var space = 4;
+            var star = 1;
+            for( var row = 1; row <= 5; row++){
+                for(var col = 1; col <= 5 - row; col++){
+                    message += "&nbsp;&nbsp;";
+                }
+                for(var col = 1; col <= row; col++){
+                    if(col% 2==0){
+                        message += "&nbsp;&nbsp;";
+                    }else{
+                        message += col;
+                    }                    
+                }
+                for(var col = row - 1; col >= 1; col--){
+                    if(col% 2==0){
+                        message += "&nbsp;&nbsp;";
+                    }else{
+                        message += col;
+                    }                    
+                }
+                message += "<br>";
+            }
+            document.getElementById("message").innerHTML = message;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="show()">Display Pattern</button>
+    <h1 id="message"></h1>
+</body>
+</html>
