@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function store(){
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            let obj = {name:name,age:age};
+            localStorage.setItem("details",JSON.stringify(obj));
+        }
+        function loadDetails(){
+            if(localStorage.getItem("details")){
+                let obj = JSON.parse(localStorage.getItem("details"));
+                document.getElementById("name").value = obj.name;
+                document.getElementById("age").value = obj.age;
+            }
+        }
+        document.addEventListener("DOMContentLoaded",function(){
+            loadDetails();
+            let btn = document.getElementById("btn");
+            btn.addEventListener("click",store);
+        });
+    </script>
+</head>
+<body>
+    <label for="name">Enter Person Name</label>
+    <input type="text" name="name" id="name"/><br><br>
+    <label for="age">Enter Person Age</label>
+    <input type="text" name="age" id="age"/><br><br>
+    <button type="button" id="btn">Store Details</button>    
+</body>
+</html>

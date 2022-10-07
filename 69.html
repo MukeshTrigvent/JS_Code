@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let current = 2;
+        function calculate(){
+            let numbers = [];
+            for(let id = 1; id <= current; id++){
+                let value = parseInt(document.getElementById("num" + id).value);
+                numbers.push(value);
+            }
+            let message = "";
+            let allValid = true;
+            for(let number of numbers){
+                if(isNaN(number)){
+                    allValid = false;
+                }
+            }
+            if(allValid){
+                let sum = 0;
+                for(let number of numbers){
+                    sum += number;
+                }
+                // String Interpolation or Temporal Literal
+                message = `Sum of input numbers: ${sum}`;
+            }else{
+                message = "Please enter valid number";
+            }
+            document.getElementById("message").innerHTML = message;
+        }
+        function addMore(){
+            let tableBody = document.getElementById("table_body");
+            /* <tr>
+                <td><label for="num1">Enter Any Number</label></td>
+                <td><input type="text" name="num1" id="num1"/></td>
+            </tr> */
+            current++;
+            let row = document.createElement("tr");
+            let col1 = document.createElement("td");
+            let col2 = document.createElement("td");
+            let label1 = document.createElement("label");
+            label1.setAttribute("for","num" + current);
+            label1.innerText = "Enter Any Number";
+            col1.appendChild(label1);
+            let input1 = document.createElement("input");
+            input1.setAttribute("type","text");
+            input1.setAttribute("name","num" + current);
+            input1.setAttribute("id","num" + current);
+            col2.appendChild(input1);
+            row.appendChild(col1);
+            row.appendChild(col2);
+            tableBody.appendChild(row);
+
+        }
+       
+        document.addEventListener("DOMContentLoaded",function(){
+           let btn1 = document.getElementById("btn1");
+            btn1.addEventListener("click",calculate);
+            let btn2 = document.getElementById("btn2");
+            btn2.addEventListener("click",addMore);
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <tbody id="table_body">
+            <tr>
+                <td><label for="num1">Enter Any Number</label></td>
+                <td><input type="text" name="num1" id="num1"/></td>
+            </tr>
+            <tr>
+                <td><label for="num2">Enter Any Number</label></td>
+                <td><input type="text" name="num2" id="num2"/></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><button type="button" id="btn1">Calculate Sum</button>    </td>
+                <td><button type="button" id="btn2">Add More Number</button>  </td>
+            </tr>
+        </tfoot>
+    </table>
+      <h1 id="message"></h1>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function display(){
+            let obj = {name:"Mahesh",age:10};
+            let result = "";
+            // Special loop for accessing JSON object elements
+            for(let key of Object.keys(obj)){
+                result += key + " : " + obj[key] + "<br>";
+            }
+            document.getElementById("message").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <button type="button" onclick="display()">Display</button>
+    <h1 id="message"></h1>
+</body>
+</html>

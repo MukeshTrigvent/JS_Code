@@ -1060,3 +1060,35 @@ var vs let
 	var variable is defined and we can define it more than once in code.
 	let variable is defined and we can define it only once.
 	var variable is available in code before defining.
+
+Associative Array or JSON:- Java Script Object Notation
+
+	It is a way to store information in form of key value pair.
+	Most of the time key is in type of string.
+
+	{} represent a JSON 
+
+	let obj = {"name":"rajesh","age":10}
+
+	obj["name"]
+	obj["age"]
+
+	Array of JSON 
+	
+		[{},{},{}]
+	
+	JSON can hold array as value 
+
+		{"data":[],"products":[]}
+
+Both localStorage as well as sessionStorage is capable to hold only string type data.
+To store an array or JSON then there are some special method for such situation.
+	JSON.stringify(array or JSON);
+	JSON.parse(string) It conver a string into JSON if possible
+
+By using, onload, onclick attribute for event binding is treated as static binding. But in JS, we are capable to perform dynamic event binding.
+
+	elementObject.addEventListener("event_name",Event Handler);
+	elementObject.removeEventListener("event_name",Event Handler);
+
+I want to create a form which is capable to construct more component at runtime.
