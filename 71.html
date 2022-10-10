@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Remaining Time: <span id="time">05:00</span></h1>
+    <button type="button" id="btn1">Start</button>
+    <button type="button" id="btn2">Stop</button>
+
+
+    <script>
+        let time = 300; // 5 minutes timer 5 minutes = 300 seconds 
+        let startFlag = false;
+        let intervalRef;
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        btn1.addEventListener("click",function(){            
+            // console.log(this);
+            let value = this.innerHTML;
+            if(value == "Start"){
+                this.innerHTML = "Reset";
+                startFlag = true;
+                // time = 300;
+                intervalRef = setInterval(changeTimer,1000);
+                // changeTimer();
+            }else{                
+                this.innerHTML = "Start";
+                time = 300;
+                startFlag = false;                
+            }
+        });
+        btn2.addEventListener("click",()=>{
+            // console.log(this);
+            // console.log()
+            startFlag = false;
+            let value = document.getElementById("btn1").innerHTML;
+            if(value== "Reset"){
+                document.getElementById("btn1").innerHTML = "Start";
+                // time = 300;
+                startFlag = false;
+            }
+            
+        });
+
+        function changeTimer(){            
+            if(time==0){
+                startFlag = false;
+            }
+            updateTimer();
+            if(startFlag){
+                time--;          
+            }else{
+                clearInterval(intervalRef);
+            }
+        }
+
+        function updateTimer(){
+            // Logic to convert seconds into minute and second.
+            let minute = Math.floor(time / 60);
+            let second = time % 60;
+            let message = "";
+            message += "0" + minute + ":";
+            if(second < 10){
+                message += "0";
+            }
+            message += second;
+            document.getElementById("time").innerHTML = message;
+        }
+    </script>
+</body>
+</html>

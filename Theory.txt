@@ -1092,3 +1092,20 @@ By using, onload, onclick attribute for event binding is treated as static bindi
 	elementObject.removeEventListener("event_name",Event Handler);
 
 I want to create a form which is capable to construct more component at runtime.
+
+Like Anonymous function there is an Arrow function.
+
+	() => {
+
+	}
+
+this is keyword in JS. This mostly active inside a function and represent the current context. In other word, it contain object reference of current available element.
+
+	this in normal function refer current context.
+	this in arrow function represent outer context.
+
+setInterval() it is identical to setTimeout() but it will execute the given function after given timer interval continusouly. And it will stop when we call clearInterval(). For calling clearInterval() we have to maintain the interval reference.
+
+Default arguments:- We pass some default value to parameter of a function which is passed as an argument into parameter of function if developer forget to pass them in calling.
+
+const variable is variable whose value can not be alter in program twicely. const variable name should be written in ALL UPPER CASE.

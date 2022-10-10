@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num1">Enter any number:</label>
+    <input type="text" name="num1" id="num1"/><br><br>
+    <label for="num2">Enter any number:</label>
+    <input type="text" name="num2" id="num2"/><br><br>
+    <label for="num3">Enter any number:</label>
+    <input type="text" name="num3" id="num3"/><br><br>
+    <label for="num4">Enter any number:</label>
+    <input type="text" name="num4" id="num4"/><br><br>
+    <label for="num5">Enter any number:</label>
+    <input type="text" name="num5" id="num5"/><br><br>
+    <input type="button" id="btn1" value="Sort Ascending"/>
+    <input type="button" id="btn2" value="Sort Descending"/>
+    <script>
+
+        const NUMBER_OF_ELEMENTS = 5;
+
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        btn1.addEventListener("click",()=>{
+            sorting();
+        });
+        btn2.addEventListener("click",()=>{
+            sorting(true);
+        });
+
+        function sorting(sortDescending=false){
+            let numArray = [];
+            for(let i = 1; i <= NUMBER_OF_ELEMENTS; i++){
+                let value = parseInt(document.getElementById("num" + i).value);
+                numArray.push(value);
+            }
+            console.log(numArray);
+            let allValid = true;
+            for(let i = 0; i < numArray.length; i++){
+                if(isNaN(numArray[i])){
+                    allValid = false;
+                }
+            }
+            if(allValid){
+                for(let i = 0; i < numArray.length - 1; i++){
+                    for(let j = 0; j < numArray.length - i - 1; j++){
+                        let swap = false;
+                        if(sortDescending){
+                            if(numArray[j] < numArray[j+1]){
+                                swap = true;
+                            }
+                        }else{
+                            if(numArray[j] > numArray[j+1]){
+                                swap = true;
+                            }
+                        }
+                        if(swap){
+                            let temp = numArray[j];
+                            numArray[j] = numArray[j+1];
+                            numArray[j+1] = temp;
+                        }
+                    }
+                }
+
+                // now we have to set these values to boxes
+                for(let i = 0; i < numArray.length; i++){
+                    document.getElementById("num" + (i+1)).value = numArray[i];
+                }
+            }
+            else{
+                alert("Please provide number only.");
+            }     
+        }
+    </script>
+</body>
+</html>
