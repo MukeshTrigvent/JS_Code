@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Hide the Div</button>
+    <div id="box" style="height:200px;background-color:red"></div>
+    <script src="jquery.js"></script>
+    <script>
+        // $(selector)
+        // $ or jQuery is readymade function inside jquery.
+        // selector is type of CSS selector
+        $(document).ready(()=>{
+            // Bind the Click Handler of button with id btn
+            $("#btn").click(function(){
+                var text = $(this).html(); // innerHTML
+                if(text.indexOf("Hide")!=-1){
+                    $(this).html("Show the Div");
+                }else{
+                    $(this).html("Hide the Div");
+                }
+                $("#box").slideToggle(1000,function(){
+                    console.log("action completed");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

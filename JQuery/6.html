@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        let current = 2;
+        function calculate(){
+            let numbers = [];
+            for(let id = 1; id <= current; id++){
+                // console.log($("#num" + id));
+                if($("#num" + id).length > 0){
+                    let value = parseInt($("#num" + id).val());
+                    numbers.push(value);
+                }
+            }
+            let message = "";
+            let allValid = true;
+            for(let number of numbers){
+                if(isNaN(number)){
+                    allValid = false;
+                }
+            }
+            if(allValid){
+                let sum = 0;
+                for(let number of numbers){
+                    sum += number;
+                }
+                // String Interpolation or Temporal Literal
+                message = `Sum of input numbers: ${sum}`;
+            }else{
+                message = "Please enter valid number";
+            }
+            $("#message").html(message);
+        }
+
+        function deleteRow(rowID){
+            // alert(rowID);
+            $("#" + rowID).remove();
+        }
+        function addMore(){
+            /* <tr>
+                <td><label for="num1">Enter Any Number</label></td>
+                <td><input type="text" name="num1" id="num1"/></td>
+            </tr> */
+            current++;
+            var rowID = `row_${current}`;
+            let rowContent = `<tr id="${rowID}">
+                                <td><label for="num${current}">Enter Any Number</label></td>
+                                <td><input type="text" name="num${current}" id="num${current}"/>
+                                <input type="button" value="Delete This Row" onclick="deleteRow('${rowID}')"/>    
+                                </td>
+                            </tr>`;
+            $("#table_body").append(rowContent);
+        }
+       
+        $(document).ready(function(){
+           $("#btn1").click(calculate);
+           $("#btn2").click(addMore);
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <tbody id="table_body">
+            <tr>
+                <td><label for="num1">Enter Any Number</label></td>
+                <td><input type="text" name="num1" id="num1"/></td>
+            </tr>
+            <tr>
+                <td><label for="num2">Enter Any Number</label></td>
+                <td><input type="text" name="num2" id="num2"/></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><button type="button" id="btn1">Calculate Sum</button>    </td>
+                <td><button type="button" id="btn2">Add More Number</button>  </td>
+            </tr>
+        </tfoot>
+    </table>
+      <h1 id="message"></h1>
+</body>
+</html>
