@@ -1109,3 +1109,15 @@ setInterval() it is identical to setTimeout() but it will execute the given func
 Default arguments:- We pass some default value to parameter of a function which is passed as an argument into parameter of function if developer forget to pass them in calling.
 
 const variable is variable whose value can not be alter in program twicely. const variable name should be written in ALL UPPER CASE.
+
+Class:- It is a structure of an object. OR It is a blue print of an object. OR It is an explanation of an Object.
+
+	Object has properties and method (function).
+
+	In Class, we define properties and function of an object.
+
+	To build classes, there is a special method called constructor.
+
+	constructor is like a function but it contain this.
+
+We can define a function inside another function.
