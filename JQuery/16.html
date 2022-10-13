@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        function callMe(){
+           let numbers = [];
+           for(let i = 1; i <= 5; i++){
+            numbers.push(Math.floor(Math.random()*50));
+           }
+           console.log(numbers);
+           let new_numbers = numbers.map((value,index,selfArray)=>{
+                return value *value;
+           });
+           console.log(new_numbers);
+           let total = numbers.reduce((prevValue,currentValue,currentIndex,selfArray)=>{
+            // console.log(prevValue,currentValue,currentIndex);
+            return prevValue + currentValue;
+           });
+           console.log(total);
+           numbers.forEach((item)=>{
+            console.log(item);
+           });
+        }
+        $(document).ready(function(){
+            $("#btn").click(callMe);
+        })
+    </script>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+</body>
+</html>
