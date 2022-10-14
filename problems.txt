@@ -228,7 +228,11 @@ Hint:- 1 is One.
     heading display message in this format 05:00
     When you click on start button, then, it start a decrement in display time.
     When you click on stop button, then, it pause the decrement of time.
+
+    -- Add a new feature for setting time. and include hour also.
         
 42) Three input boxes which accept priniciple, rate and year and one button for calculating simple interest. And your result will be displayed in tabular structure
 in descending order.
     There must be an option to remove item from storage.
+
+43) Build a simple calculator.

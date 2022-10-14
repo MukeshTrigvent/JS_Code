@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        async function callMe(){
+            $("#table").hide();
+            $("#loader").show();
+            let response = await fetch("https://dummyjson.com/quotes")
+            let objectList = await  response.json();
+            let records = objectList["quotes"];
+            records.forEach(element => {
+                let result = `<tr>
+                    <td>${element.id}</td>
+                    <td>${element.quote}</td>
+                    <td>${element.author}</td>
+                </tr>`;    
+                $("#table_body").append(result);
+            });
+            $("#table").show();
+            $("#loader").hide();
+        }
+        $(document).ready(function(){
+            $("#btn").click(callMe);
+        })
+    </script>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <img src="../images/loader.gif" id="loader" style="display: none;"/> 
+    <table id="table" style="display: none;">
+        <thead>
+            <tr>
+                <th>Quote ID</th>
+                <th>Quote Text</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.js"></script>
+    <script>
+        function callMe(){
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function(){
+                console.log(this.responseText);
+                let obj = JSON.parse(this.responseText);
+                $("#message").html(`Name: ${obj.name} Age: ${obj.age}`);
+            }
+            xhttp.open("GET","data.json",true);
+            xhttp.send();
+        }
+        $(document).ready(function(){
+            $("#btn").click(callMe);
+        })
+    </script>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <h1 id="message"></h1>
+</body>
+</html>

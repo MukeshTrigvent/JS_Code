@@ -1121,3 +1121,19 @@ Class:- It is a structure of an object. OR It is a blue print of an object. OR I
 	constructor is like a function but it contain this.
 
 We can define a function inside another function.
+
+API:- An application programming interface is a way for two or more computer programs to communicate with each other. It is a type of software interface, offering a service to other pieces of software. A document or standard that describes how to build or use such a connection or interface is called an API specification.
+
+	There are two form API working
+		
+		1) API consuming 
+
+		2) API producing 
+
+There are two way to achieve this.
+
+	1) AJAX Asynchronous JavaScript And XML 
+
+		It is a way to generate background request and capable to handle response in background.
+
+	2) Fetch API 
